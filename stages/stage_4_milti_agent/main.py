@@ -357,6 +357,20 @@ async def main():
     print("  ./start_all.sh && python test_client.py")
     print("=" * 70)
 
+    # Vẽ graph và lưu ra file png (Codelab Phần 4 - Bước 3)
+    try:
+        from IPython.display import Image, display
+        display(Image(graph.get_graph().draw_mermaid_png()))
+    except Exception:
+        pass
+    
+    try:
+        with open("stages/stage_4_milti_agent/stage_4_graph.png", "wb") as f:
+            f.write(graph.get_graph().draw_mermaid_png())
+        print("\n🎨 Đồ thị Graph đã được vẽ và lưu thành công tại 'stages/stage_4_milti_agent/stage_4_graph.png'")
+    except Exception as e:
+        print(f"\n⚠️ Không thể vẽ graph lưu file: {e}")
+
 
 if __name__ == "__main__":
     load_dotenv()
