@@ -13,7 +13,7 @@
 ### PHẦN 1: Direct LLM Calling (Gọi LLM trực tiếp)
 
 **1. LLM được khởi tạo như thế nào? (Hàm `get_llm()`)**
-- LLM được khởi tạo bằng cách gọi hàm `get_llm()` trong [common/llm.py](file:///d:/VinUni-AI20K/Day9_Multi-Agent_MCP-A2A/common/llm.py).
+- LLM được khởi tạo bằng cách gọi hàm `get_llm()` trong [common/llm.py](common/llm.py).
 - Hàm này trả về một đối tượng `ChatOpenAI` từ thư viện `langchain_openai`, kết nối tới endpoint tương thích với OpenAI của mô hình đích (ví dụ: Mistral API `https://api.mistral.ai/v1` hoặc Groq API `https://api.groq.com/openai/v1`) thông qua các biến cấu hình từ môi trường (`MISTRAL_API_KEY`, `GROQ_API_KEY`, `LLM_MODEL`).
 
 **2. Message được gửi đến LLM có cấu trúc gì?**
@@ -31,7 +31,7 @@
 ### PHẦN 2: LLM + RAG & Tools (Kết hợp RAG và Công cụ)
 
 **1. Hàm `@tool` decorator được dùng ở đâu?**
-- Decorator `@tool` (được import từ `langchain_core.tools`) được đặt ngay phía trên định nghĩa của hai hàm trong [stages/stage_2_rag_tools/main.py](file:///d:/VinUni-AI20K/Day9_Multi-Agent_MCP-A2A/stages/stage_2_rag_tools/main.py):
+- Decorator `@tool` (được import từ `langchain_core.tools`) được đặt ngay phía trên định nghĩa của hai hàm trong [stages/stage_2_rag_tools/main.py](stages/stage_2_rag_tools/main.py):
   - Hàm `search_legal_database`: Tìm kiếm thông tin luật trong cơ sở dữ liệu tri thức pháp lý.
   - Hàm `calculate_damages`: Ước tính số tiền bồi thường thiệt hại vi phạm hợp đồng.
 
@@ -121,7 +121,7 @@
 ## PHẦN B: BÁO CÁO KẾT QUẢ THỰC HÀNH CÁC STAGES
 
 ### 1. Kết quả chạy thành công Exercise 2 (Tools & Knowledge Base)
-- File thực hành: [exercises/exercise_2_tools.py](file:///d:/VinUni-AI20K/Day9_Multi-Agent_MCP-A2A/exercises/exercise_2_tools.py)
+- File thực hành: [exercises/exercise_2_tools.py](exercises/exercise_2_tools.py)
 - **Log chạy thực tế:**
   ```text
   Câu hỏi: Thời hiệu khởi kiện vụ vi phạm hợp đồng là bao lâu?
@@ -133,8 +133,8 @@
   ```
 
 ### 2. Kết quả chạy thành công Exercise 4 (Multi-Agent với Privacy Agent)
-- File thực hành: [exercises/exercise_4_multiagent.py](file:///d:/VinUni-AI20K/Day9_Multi-Agent_MCP-A2A/exercises/exercise_4_multiagent.py)
-- **Sơ đồ đồ thị LangGraph hoàn chỉnh đã tạo:** [exercises/exercise_4_complete_graph.png](file:///d:/VinUni-AI20K/Day9_Multi-Agent_MCP-A2A/exercises/exercise_4_complete_graph.png)
+- File thực hành: [exercises/exercise_4_multiagent.py](exercises/exercise_4_multiagent.py)
+- **Sơ đồ đồ thị LangGraph hoàn chỉnh đã tạo:** [exercises/exercise_4_complete_graph.png](exercises/exercise_4_complete_graph.png)
 - **Log báo cáo đầu ra của đồ thị Multi-Agent:**
   ```text
   Câu hỏi: Nếu công ty bị rò rỉ dữ liệu khách hàng, hậu quả pháp lý và thuế là gì?
@@ -150,8 +150,8 @@
   ```
 
 ### 3. Kết quả chạy thành công Stage 5 (Distributed A2A System)
-- File điều phối: [start_all.ps1](file:///d:/VinUni-AI20K/Day9_Multi-Agent_MCP-A2A/start_all.ps1)
-- File client kiểm thử: [test_client.py](file:///d:/VinUni-AI20K/Day9_Multi-Agent_MCP-A2A/test_client.py)
+- File điều phối: [start_all.ps1](start_all.ps1)
+- File client kiểm thử: [test_client.py](test_client.py)
 - **Trạng thái khởi chạy của các dịch vụ:**
   - Registry chạy thành công trên cổng `10000`.
   - Tax Agent đăng ký và lắng nghe trên cổng `10102`.
