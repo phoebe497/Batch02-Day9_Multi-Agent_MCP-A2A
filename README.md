@@ -1,5 +1,9 @@
 # Legal Multi-Agent System with A2A Protocol
 
+> [!IMPORTANT]
+> **BÁO CÁO KẾT QUẢ THỰC HÀNH CODELAB:**
+> Tất cả các câu trả lời lý thuyết, báo cáo thực hành Stage 1-5 và hình ảnh đồ thị hoàn chỉnh của học viên **Nguyễn Như Yến Phương (MHV: 2A202600616)** được trình bày chi tiết tại file [ANSWERS.md](ANSWERS.md).
+
 A distributed legal advisory system where specialised AI agents collaborate using Google's [Agent-to-Agent (A2A) protocol](https://github.com/google/A2A). Built with **LangGraph**, **LangChain**, and the **a2a-sdk**, the project serves as both a working demo and a hands-on learning path — progressing from a simple LLM API call (Stage 1) to a fully distributed multi-agent network (Stage 5).
 
 ## Architecture
